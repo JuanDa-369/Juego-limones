@@ -107,3 +107,14 @@ function actualizarPantalla(){
     limonY=0;
     actualizarPantalla();
  } 
+ function reiniciar() {
+    clearInterval(intervalo);
+    vidas = 3;
+    puntaje = 0;
+    velocidadCaida = 200;
+    
+    document.getElementById("puntaje").innerText = "Puntaje: " + puntaje;
+    document.getElementById("vidas").innerText = "vidas: " + vidas;
+
+    iniciar();
+}
