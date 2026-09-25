@@ -18,7 +18,7 @@ let velocidadCaida=200;
 let intervalo;
 
 function iniciar(){
-   setInterval(bajarLimon,100); 
+   setInterval(bajarLimon,200); 
     dibujarSuelo();
     dibujarPersonaje();
     aparecerLimon();
@@ -78,6 +78,14 @@ function actualizarPantalla(){
         puntaje=puntaje+1;
         mostrarEnSpan("txtPuntaje",puntaje)
     }
+      if (puntaje === 3) {
+      velocidadCaida = 150;
+      } else if (puntaje === 6) {
+      velocidadCaida = 100;
+      } else if (puntaje === 10) {
+      alert("TIENES LOS LIMONES, AHORA TE FALTA SAL Y TEQUILA");
+}
+    
  }
 
  function detectarPiso(){
