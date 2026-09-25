@@ -18,7 +18,7 @@ let velocidadCaida=200;
 let intervalo;
 
 function iniciar(){
-   setInterval(bajarLimon,200); 
+   intervalo= setInterval(bajarLimon, velocidadCaida); 
     dibujarSuelo();
     dibujarPersonaje();
     aparecerLimon();
@@ -84,13 +84,16 @@ function actualizarPantalla(){
       velocidadCaida = 100;
       } else if (puntaje === 10) {
       alert("TIENES LOS LIMONES, AHORA TE FALTA SAL Y TEQUILA");
-}
+      }else if (puntaje===10){
+         alert("TIENES LOS LIMONES, AHORA TE FALTA SAL Y TEQUILA");
+      }
     
  }
 
  function detectarPiso(){
    if(vidas===0){
       alert("GAME OVER")
+      clearInterval(intervalo);
    }
     if(limonY+ALTURA_LIMON==canvas.height-ALTURA_SUELO){
         aparecerLimon();
