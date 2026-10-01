@@ -30,7 +30,7 @@ function dibujarSuelo(){
 }
 
 function dibujarPersonaje(){
-    ctx.fillStyle="yellow"
+    ctx.fillStyle="blue"
     ctx.fillRect(personajeX,personajeY,ANCHO_PERSONAJE,ALTURA_PERSONAJE);
 }
 
@@ -57,7 +57,7 @@ function actualizarPantalla(){
  }
 
  function dibujarLimon(){
-    ctx.fillStyle="green"
+    ctx.fillStyle="orange"
     ctx.fillRect(limonX,limonY,ANCHO_LIMON,ALTURA_LIMON);
  }
 
@@ -92,7 +92,7 @@ function actualizarPantalla(){
 
  function detectarPiso(){
    if(vidas===0){
-      alert("GAME OVER")
+      alert("Juego Terminado")
       clearInterval(intervalo);
    }
     if(limonY+ALTURA_LIMON==canvas.height-ALTURA_SUELO){
@@ -117,4 +117,7 @@ function actualizarPantalla(){
    mostrarEnSpan("txtVidas", vidas);
 
     iniciar();
+} 
+function desaparecerPersonaje(){
+   ctx.clearRect(personajeX,personajeY,ANCHO_PERSONAJE,ALTURA_PERSONAJE);
 }
