@@ -113,8 +113,8 @@ function actualizarPantalla(){
     puntaje = 0;
     velocidadCaida = 200;
     
-    document.getElementById("puntaje").innerText = "Puntaje: " + puntaje;
-    document.getElementById("vidas").innerText = "vidas: " + vidas;
+   mostrarEnSpan("txtPuntaje", puntaje);
+   mostrarEnSpan("txtVidas", vidas);
 
     iniciar();
 }
