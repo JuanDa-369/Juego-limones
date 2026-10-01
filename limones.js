@@ -30,8 +30,13 @@ function dibujarSuelo(){
 }
 
 function dibujarPersonaje(){
-    ctx.fillStyle="blue"
-    ctx.fillRect(personajeX,personajeY,ANCHO_PERSONAJE,ALTURA_PERSONAJE);
+    ctx.fillStyle = "#365314";
+    ctx.fillRect(
+        personajeX,
+        personajeY,
+        ANCHO_PERSONAJE,
+        ALTURA_PERSONAJE
+    );
 }
 
 function moverIzquierda(){
@@ -55,12 +60,15 @@ function actualizarPantalla(){
  function limparCanva(){
     ctx.clearRect(0,0,canvas.width,canvas.height);
  }
-
- function dibujarLimon(){
-    ctx.fillStyle="orange"
-    ctx.fillRect(limonX,limonY,ANCHO_LIMON,ALTURA_LIMON);
- }
-
+function dibujarLimon(){
+    ctx.fillStyle = "#facc15";
+    ctx.fillRect(
+        limonX,
+        limonY,
+        ANCHO_LIMON,
+        ALTURA_LIMON
+    );
+}
  function bajarLimon(){
     limonY=limonY+10
     actualizarPantalla();
@@ -117,7 +125,4 @@ function actualizarPantalla(){
    mostrarEnSpan("txtVidas", vidas);
 
     iniciar();
-} 
-function desaparecerPersonaje(){
-   ctx.clearRect(personajeX,personajeY,ANCHO_PERSONAJE,ALTURA_PERSONAJE);
 }

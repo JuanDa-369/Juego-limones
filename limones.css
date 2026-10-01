@@ -46,10 +46,21 @@ backdrop-filter: blur(8px);
 margin-bottom: 20px;
 }
 
-.icono {
-font-size: 55px;
+.contenedor-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 12px;
+}
 
-animation: rebote 2s ease-in-out infinite;
+.logo-escuela {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #84cc16;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+  animation: rebote 2s ease-in-out infinite;
 }
 
 h1 {
@@ -76,13 +87,21 @@ font-weight: bold;
 color: #365314;
 }
 
-h2 {
-margin: 5px 0 0;
+.autor {
+  margin: 8px 0 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 17px;
+  font-weight: 600;
+  font-style: italic;
+  letter-spacing: 1.5px;
+  color: #4d7c0f;
+  text-shadow:
+    1px 1px 0 rgba(255, 255, 255, 0.6);
+  transition: color 0.2s ease;
+}
 
-font-size: 14px;
-font-weight: normal;
-
-color: #65a30d;
+.autor:hover {
+  color: #365314;
 }
 
 /* ZONA DEL JUEGO */
@@ -378,3 +397,4 @@ width: 100%;
 font-size: 14px;
 }
 }
+
